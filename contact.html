@@ -6,29 +6,25 @@
         <!-- meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, intial-scale=1, shrink-to-fit=no">
+            
+        <!-- Font Awesome Icons -->
+        <link rel="stylesheet" href="https://cdnjs.buttflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
                 
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<link rel="shortcut icon" type="img/ygj" href="ygj.ico" />
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<style>
-            /* Remove navbar defaults */
-                .navbar {
-                    margin-bottom: 0;
-                    border-radius: 0;
-                }
-                    
-                /* Add grey background color and padding for footer */
-                footer {
-                    background-color: #dcdcdc;
-                    padding: 25px;
-                }
-        </style>
+            
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="shortcut icon" type="img/ygj" href="ygj.ico" />
+                
+        <!-- JavaScript -->
+        <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     </head>
     
     <body>
-        <nav class="navbar navbar-inverse">
+        <nav class="navbar navbar-inverse navbar-fixed-top">
             <div class="container-fluid">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -36,23 +32,78 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Jake Day</a>
+                    <a class="navbar-brand" href="index.html">
+                        <img src="img/ygj.gif" alt="Brand Icon" width="51" height="51">
+                    </a>
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="projects.html">Projects</a></li>
-                        <li><a href="portfolio.html">Portfolio</a></li>
-                        <li><a href="work.html">Work Experience</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li class="active"><a href="index.html">
+                            <i class="fas fa-home"></i>
+                            Home</a>
+                        </li>
+                        <li><a href="about.html">
+                            <i class="fas fa-user"></i>
+                            About</a>
+                        </li>
+                        <li><a href="projects.html">
+                            <i class="fas fa-tasks"></i>
+                            Projects</a>
+                        </li>
+                        <li><a href="portfolio.html">
+                            <i class="fas fa-folder-open"></i>
+                            Portfolio</a>
+                        </li>
+                        <li><a href="work.html">
+                            <i class="fas fa-briefcase"></i>
+                            Work Experience</a>
+                        </li>
+                        <li><a href="contact.html">
+                            <i class="fas fa-mobile"></i>
+                            Contact</a>
+                        </li>
                     </ul>
                 </div>
             </div>
         </nav>
-      	<div class="container_fluid">  
-        	<img src="/img/contact.png" alt="contact" class="img-rounded">
-	</div>
+
+        <div class="container-fluid">
+            <h1>Contact Me</h1>
+            <div class="row">
+                <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
+                    <ul class="list-grouplist-group-flush">
+                        <li class="list-group-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            Santa Clara, CA
+                        </li>
+                        <li class="list-group-item">
+                            <i class="fas fa-mobile"></i>
+                            (503) 544-5165
+                        </li>
+                        <li class="list-group-item">
+                            <i class="fas fa-envelope"></i>
+                            jday@scu.edu
+                        </li>
+                        <li class="list-group-item">
+                            <i class="fab fa-github"></i>
+                            <a href="https://github.com/YouGotJaked">https://github.com/YouGotJaked</a>
+                        </li>
+                        <li class="list-group-item">
+                            <i class="fab fa-linkedin-in"></i>
+                            <a href="https://www.linkedin.com/in/jaked97/">https://www.linkedin.com/in/jaked97/</a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12" style="background-color:pink;">
+                    <p>Sed ut perspiciatis...</p>
+                    <p>Sed ut perspiciatis...</p>
+                    <p>Sed ut perspiciatis...</p>
+                    <p>Sed ut perspiciatis...</p>
+                    <p>Sed ut perspiciatis...</p>
+                </div>
+            </div>
+        </div>
     </body>
     
 </html>
