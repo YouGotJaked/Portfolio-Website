@@ -67,15 +67,27 @@
             </div>
         </nav>
         
-        <div class="jumbotron">
-            <div class="container text-center">
-                <h1>Under Construction.</h1>
-                <div class="progress">
-                    <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="1" aria-valuemin="0" aria-valuemax="100" style="width:5%">
-                        5%
-                    </div>
-                </div>
-            </div>
+        <div id="pills">
+            <ul class="nav nav-pills nav-justified">
+                <li role="presentation" class="pill active"><a href="#">Intros/Animation</a></li>
+                <li role="presentation" class="pill"><a href="#">Album Artwork</a></li>
+                <li role="presentation" class="pill"><a href="#">Logos</a></li>
+                <li role="presentation" class="pill"><a href="#">Wallpapers</a></li>
+            </ul>
         </div>
+        
+        <script>
+            // Add active class to the current button (highlight it)
+            var header = document.getElementById("pills");
+            var pills = header.getElementsByClassName("pill");
+            for (var i = 0; i < pills.length; i++) {
+                pills[i].addEventListener("click", function() {
+                    var current = document.getElementsByClassName("active");
+                    current[0].className = current[0].className.replace(" active", "");
+                    this.className += " active";
+                });
+            }
+        </script>
+
     </body>
 </html>
