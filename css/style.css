@@ -25,11 +25,26 @@ html, body {
     padding-right: 51px;
 }
 
-.nav-pills>li.active>a.active,
+.nav-pills>li.active>a:active
 .nav-pills>li.active>a:hover,
 .nav-pills>li.active>a:focus {
     background-color: #339933;
     color: white;
+}
+
+.nav-pills .open>a,
+.nav-pills .open>a:active,
+.nav-pills .open>a:focus {
+    background-color: #339933;
+}
+
+.nav-pills>li>a {
+    color: #339933;
+}
+
+.tab-content {
+    padding-left: 51px;
+    padding-right: 51px;
 }
 
 #main {

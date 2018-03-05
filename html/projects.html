@@ -67,15 +67,255 @@
             </div>
         </nav>
         
-        <div class="jumbotron">
-            <div class="container text-center">
-                <h1>Under Construction.</h1>
-                <div class="progress">
-                    <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="1" aria-valuemin="0" aria-valuemax="100" style="width:5%">
-                        5%
+        <div id="pills">
+            <ul class="nav nav-pills nav-justified">
+                <li class="active"><a data-toggle="pill" href="#home">C/C++/Java</a></li>
+                <li><a data-toggle="pill" href="#python">Python</a></li>
+                <li><a data-toggle="pill" href="#scripts">Scripts</a></li>
+                <li><a data-toggle="pill" href="#ios">iOS/Android</a></li>
+                <li><a data-toggle="pill" href="#vr">VR</a></li>
+                <li><a data-toggle="pill" href="#other">Other</a></li>
+            </ul>
+            
+            <div class="tab-content">
+                <div id="home" class="tab-pane fade in active">
+                    <h3>C/C++/Java</h3>
+                    <p>Majority of my projects fit under this category. Most are schoolwork but person projects are included as well.</p>
+                    <div class="row">
+                        
+                        <!-- Page Replacement Algorithms -->
+                        <div class="col-sm-6 col-md-4">
+                            <div class="thumbnail">
+                                <img src="..." alt="PGA">
+                                    <div class="caption">
+                                        <h3>Page Replacement Algorithms</h3>
+                                        <p>Simulation of common page replacement algorithms: First In First Out (FIFO), Least Recently Used (LRU), Least Frequently Used (LFU), and Random.</p>
+                                        <p><a href="https://github.com/YouGotJaked/Page-Replacement-Algorithms" target="_blank" class="btn btn-primary" role="button">Source</a></p>
+                                    </div>
+                            </div>
+                        </div>
+                        
+                        <!-- File Transfer v3 -->
+                        <div class="col-sm-6 col-md-4">
+                            <div class="thumbnail">
+                                <img src="..." alt="FTv3">
+                                    <div class="caption">
+                                        <h3>FTv3
+                                            <span class="badge">C</span>
+                                            <span class="badge">Lab</span>
+                                        </h3>
+                                        <p>This program implements the rdt3.0 protocol; it extends FTv2 by dealing with loss of messages.</p>
+                                        <p><a href="https://github.com/YouGotJaked/FTv3" target="_blank" class="btn btn-primary" role="button">Source</a></p>
+                                    </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Minix Random Scheduling -->
+                        <div class="col-sm-6 col-md-4">
+                            <div class="thumbnail">
+                                <img src="..." alt="Minix">
+                                    <div class="caption">
+                                        <h3>Minix Random Scheduling</h3>
+                                        <p>This project modifies the Minix startup banner and implements a randomized selection of processes to skew the priority scheduling. This should increase the amount of time it takes to boot by a noticeable amount.</p>
+                                        <p><a href="https://github.com/YouGotJaked/minix-random-scheduling" target="_blank" class="btn btn-primary" role="button">Source</a></p>
+                                    </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Fork -->
+                        <div class="col-sm-6 col-md-4">
+                            <div class="thumbnail">
+                                <img src="..." alt="Fork">
+                                    <div class="caption">
+                                        <h3>Fork</h3>
+                                        <p>Collection of C programs to demonstrate the fork() system call.</p>
+                                        <p><a href="https://github.com/YouGotJaked/fork" class="btn btn-primary" target="_blank" role="button">Source</a></p>
+                                    </div>
+                            </div>
+                        </div>
+                        
                     </div>
+                </div>
+                
+                <div id="python" class="tab-pane fade">
+                    <h3>Python</h3>
+                    <p>Python projects written for a variety of applications, typically either ran as an automated script or embedded as a plugin in design programs.</p>
+                    <div class="row">
+                        
+                        <!-- Audio Animation -->
+                        <div class="col-sm-6 col-md-4">
+                            <div class="thumbnail">
+                                <img src="..." alt="audio">
+                                    <div class="caption">
+                                        <h3>Audio Animation
+                                            <span class="badge">Python</span>
+                                            <span class="badge">Cinema 4D</span>
+                                        </h3>
+                                        <p>Python script for Cinema 4D that changes an object's scale based on the BPM of a song.</p>
+                                        <p><a href="https://github.com/YouGotJaked/Audio-Animation" target="_blank" class="btn btn-primary" role="button">Source</a></p>
+                                    </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Reddit Keyword Search Bot -->
+                        <div class="col-sm-6 col-md-4">
+                            <div class="thumbnail">
+                                <img src="..." alt="Reddit">
+                                    <div class="caption">
+                                        <h3>Reddit Keyword Search Bot
+                                            <span class="badge">Python</span>
+                                            <span class="badge">Web</span>
+                                        </h3>
+                                        <p>Python script that searches for new posts with a specified keyword and responds to said post with a comment.</p>
+                                        <p><a href="https://github.com/YouGotJaked/Reddit-Keyword-Search-Bot" target="_blank" class="btn btn-primary" role="button">Source</a></p>
+                                    </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Codingbat Solutions -->
+                        <div class="col-sm-6 col-md-4">
+                            <div class="thumbnail">
+                                <img src="..." alt="CodingBat">
+                                    <div class="caption">
+                                        <h3>CodingBat Solutions
+                                            <span class="badge">Python</span>
+                                        </h3>
+                                        <p>Solutions for CodingBat Python problems.</p>
+                                        <p><a href="https://github.com/YouGotJaked/CodingBat-Python" target="_blank" class="btn btn-primary" role="button">Source</a></p>
+                                    </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="scripts" class="tab-pane fade">
+                    <h3>Scripts</h3>
+                    <p>Other scripts designed for testing or automation in order to make my life easier. Windows scripts written using VBScript or as batch commands, and macOS scripts written using AppleScript and the Unix shell. Most web-based scripts are written using JavaScript.</p>
+                    <div class="row">
+                        
+                        <!-- User Workload -->
+                        <div class="col-sm-6 col-md-4">
+                            <div class="thumbnail">
+                                <img src="..." alt="UserWorkload">
+                                    <div class="caption">
+                                        <h3>User Workload
+                                            <span class="badge">Shell</span>
+                                            <span class="badge">Testing</span>
+                                        </h3>
+                                        <p>This shell script is designed to test the impact of user workload on file system performance.</p>
+                                        <p><a href="https://github.com/YouGotJaked/user-workload" target="_blank" class="btn btn-primary" role="button">Source</a></p>
+                                    </div>
+                            </div>
+                        </div>
+                        
+                        <!-- macOS Disk Speed -->
+                        <div class="col-sm-6 col-md-4">
+                            <div class="thumbnail">
+                                <img src="..." alt="DiskSpeed">
+                                    <div class="caption">
+                                        <h3>macOS Disk Speed Testing
+                                            <span class="badge">Shell</span>
+                                            <span class="badge">Testing</span>
+                                        </h3>
+                                        <p>A collection of Bash scripts used for benchmarking disk speeds on macOS.</p>
+                                        <p><a href="https://github.com/YouGotJaked/macOS-Disk-Speed-Testing" target="_blank" class="btn btn-primary" role="button">Source</a></p>
+                                    </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Save PDF to PNG -->
+                        <div class="col-sm-6 col-md-4">
+                            <div class="thumbnail">
+                                <img src="..." alt="PDF-PNG">
+                                    <div class="caption">
+                                        <h3>Save PDF as PNG
+                                            <span class="badge">JavaScript</span>
+                                            <span class="badge">Automation</span>
+                                        </h3>
+                                        <p>This script takes a filled out PDF form and automatically saves it as a PNG.</p>
+                                        <p><a href="https://github.com/YouGotJaked/Save-PDF-as-PNG" target="_blank" class="btn btn-primary" role="button">Source</a></p>
+                                    </div>
+                            </div>
+                        </div>
+                    
+                    </div>
+                </div>
+                
+                <div id="ios" class="tab-pane fade">
+                    <h3>iOS/Android Apps</h3>
+                    <p>Mobile applications developed in my free time as side projects. iOS apps are written in Swift 4, and Android apps are written in Kotlin/Java.</p>
+                    <div class="row">
+                        
+                        <!-- Sphere Kotlin Demo -->
+                        <div class="col-sm-6 col-md-4">
+                            <div class="thumbnail">
+                                <img src="..." alt="UserLoc">
+                                    <div class="caption">
+                                        <h3>Get User Location</h3>
+                                        <p>Android application written in Kotlin which displays a user's current location and uses that information to prefill a form with their address. When the form is submitted, the user's name and address is parsed as a JSON object using Gson.</p>
+                                        <p><a href="https://github.com/YouGotJaked/Get-User-Location" class="btn btn-primary" target="_blank" role="button">Source</a></p>
+                                    </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Meddie's Mobile Cookbook -->
+                        <div class="col-sm-6 col-md-4">
+                            <div class="thumbnail">
+                                <img src="..." alt="Meddie">
+                                    <div class="caption">
+                                    <h3>Meddie's Mobile Cookbook</h3>
+                                    <p>iOS application containing library full of simple recipes that Maddie would enjoy.</p>
+                                        <p><a href="https://github.com/YouGotJaked/Meddie-Mobile-Cookbook" class="btn btn-primary" target="_blank" role="button">Source</a></p>
+                                    </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                        
+                <div id="vr" class="tab-pane fade">
+                    <h3>VR/AR</h3>
+                    <p>Variety of projects. Larger projects are developed in Unreal Engine 4 using C++/Blueprint. Smaller projects are written in Lua using the LÖVR framework. Future projects may include ARKit.</p>
+                    
+                    <div class="row">
+                    
+                        <!-- Within -->
+                        <div class="col-sm-6 col-md-4">
+                            <div class="thumbnail">
+                                <img src="..." alt="Within">
+                                    <div class="caption">
+                                        <h3>Within
+                                            <span class="badge">C++</span>
+                                            <span class="badge">UE4</span>
+                                        </h3>
+                                        <p>VR experience designed to put users inside the head of Alex, a teen diagnosed with generalized anxiety disorder. Alex is currently in detention, and users must complete a series of puzzles before leaving. Beware for thinking traps. Written using Blueprint/C++ in Unreal Engine 4.</p>
+                                        <p><a href="https://github.com/YouGotJaked/within" class="btn btn-primary" target="_blank" role="button">Source</a></p>
+                                    </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="other" class="tab-pane fade">
+                    <h3>Other</h3>
+                    <p>Miscellaneous side projects that do not fit the other categories.</p>
                 </div>
             </div>
         </div>
+        
+        <script>
+            // Add active class to the current button (highlight it)
+            var header = document.getElementById("pills");
+            var pills = header.getElementsByClassName("pill");
+            for (var i = 0; i < pills.length; i++) {
+                pills[i].addEventListener("click", function() {
+                    var current = document.getElementsByClassName("active");
+                    current[0].className = current[0].className.replace(" active", "");
+                    this.className += " active";
+                });
+            }
+        </script>
     </body>
 </html>
