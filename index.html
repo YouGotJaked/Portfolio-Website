@@ -23,7 +23,9 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     </head>
     
-    <body>
+    <!-- Scrollable area -->
+    <body data-spy="scroll" data-target=".navbar" data-offset="50">
+        <!-- Top navigation bar -->
         <nav class="navbar navbar-inverse navbar-fixed-top">
             <div class="container-fluid">
                 <div class="navbar-header">
@@ -38,27 +40,27 @@
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="index.html">
+                        <li class="active"><a href="#home">
                             <i class="fas fa-home"></i>
                             Home</a>
                         </li>
-                        <li><a href="html/about.html">
+                        <li><a href="#about">
                             <i class="fas fa-user"></i>
                             About</a>
                         </li>
-                        <li><a href="html/projects.html">
+                        <li><a href="#projects">
                             <i class="fas fa-tasks"></i>
                             Projects</a>
                         </li>
-                        <li><a href="html/portfolio.html">
+                        <li><a href="#portfolio">
                             <i class="fas fa-folder-open"></i>
                             Portfolio</a>
                         </li>
-                        <li><a href="html/work.html">
+                        <li><a href="#work">
                             <i class="fas fa-briefcase"></i>
                             Work Experience</a>
                         </li>
-                        <li><a href="html/contact.html">
+                        <li><a href="#contact">
                             <i class="fas fa-mobile"></i>
                             Contact</a>
                         </li>
@@ -67,7 +69,8 @@
             </div>
         </nav>
         
-        <div class="jumbotron">
+        <!-- HOME -->
+        <div id="home" class="jumbotron">
             <div class="container text-center">
                 <p> Hi, my name is</p>
                 <p style="font-size:600%;"><strong>Jake Day</strong></p>
@@ -77,7 +80,494 @@
                 </button>
             </div>
         </div>
+        
+        <!-- ABOUT ME -->
+        <div id="about" class="container-fluid">
+            <h1>About Me</h1>
+            <div class="contact-photo">
+                <img src="img/contact.png" class="img-responsive" width="756" height="555">
+            </div>
+            <p>Hi, my name is Jake. I am a senior Computer Science and Engineering major at Santa Clara University.</p>
+        </div>
        
+       <!-- PROJECTS -->
+       <div id="projects" class="container-fluid">
+           <h1>Projects</h1>
+           <ul class="nav nav-pills nav-justified">
+               <li class="active"><a data-toggle="pill" href="#oop">C/C++/Java</a></li>
+               <li><a data-toggle="pill" href="#python">Python</a></li>
+               <li><a data-toggle="pill" href="#scripts">Scripts</a></li>
+               <li><a data-toggle="pill" href="#ios">iOS/Android</a></li>
+               <li><a data-toggle="pill" href="#vr">VR</a></li>
+               <li><a data-toggle="pill" href="#other">Other</a></li>
+           </ul>
+           
+           <div class="tab-content">
+               <div id="oop" class="tab-pane fade in active">
+                   <h3>C/C++/Java</h3>
+                   <p>Majority of my projects fit under this category. Most are schoolwork but person projects are included as well.</p>
+                   <div class="row display-flex">
+                       
+                       <!-- Page Replacement Algorithms -->
+                       <div class="col-sm-6 col-md-4">
+                           <div class="thumbnail">
+                               <!-- <img src="../img/pga.png" alt="PGA"> -->
+                               <div class="caption">
+                                   <h3>Page Replacement Algorithms
+                                       <span class="badge">C</span>
+                                       <span class="badge">Lab</span>
+                                       <span class="badge">Linux</span>
+                                   </h3>
+                                   <p>Simulation of common page replacement algorithms: First In First Out (FIFO), Least Recently Used (LRU), Least Frequently Used (LFU), and Random.</p>
+                                   <p><a href="https://github.com/YouGotJaked/Page-Replacement-Algorithms" target="_blank" class="btn btn-primary" role="button">Source</a></p>
+                               </div>
+                           </div>
+                       </div>
+                       
+                       <!-- File Transfer v3 -->
+                       <div class="col-sm-6 col-md-4">
+                           <div class="thumbnail">
+                               <!-- <img src="..." alt="FTv3"> -->
+                               <div class="caption">
+                                   <h3>FTv3
+                                       <span class="badge">C</span>
+                                       <span class="badge">Lab</span>
+                                       <span class="badge">Linux</span>
+                                   </h3>
+                                   <p>This program implements the rdt3.0 protocol; it extends FTv2 by dealing with loss of messages.</p>
+                                   <p><a href="https://github.com/YouGotJaked/FTv3" target="_blank" class="btn btn-primary" role="button">Source</a></p>
+                               </div>
+                           </div>
+                       </div>
+                       
+                       <!-- Minix Random Scheduling -->
+                       <div class="col-sm-6 col-md-4">
+                           <div class="thumbnail">
+                               <!-- <img src="..." alt="Minix"> -->
+                               <div class="caption">
+                                   <h3>Minix Random Scheduling
+                                       <span class="badge">C</span>
+                                       <span class="badge">Lab</span>
+                                       <span class="badge">Linux</span>
+                                   </h3>
+                                   <p>This project modifies the Minix startup banner and implements a randomized selection of processes to skew the priority scheduling. This should increase the amount of time it takes to boot by a noticeable amount.</p>
+                                   <p><a href="https://github.com/YouGotJaked/minix-random-scheduling" target="_blank" class="btn btn-primary" role="button">Source</a></p>
+                               </div>
+                           </div>
+                       </div>
+                       
+                       <!-- Fork -->
+                       <div class="col-sm-6 col-md-4">
+                           <div class="thumbnail">
+                               <!-- <img src="..." alt="Fork"> -->
+                               <div class="caption">
+                                   <h3>Fork
+                                       <span class="badge">C</span>
+                                       <span class="badge">Lab</span>
+                                       <span class="badge">Linux</span>
+                                   </h3>
+                                   <p>Collection of C programs to demonstrate the fork() system call.</p>
+                                   <p><a href="https://github.com/YouGotJaked/fork" class="btn btn-primary" target="_blank" role="button">Source</a></p>
+                               </div>
+                           </div>
+                       </div>
+                       
+                   </div>
+               </div>
+               
+               <div id="python" class="tab-pane fade">
+                   <h3>Python</h3>
+                   <p>Python projects written for a variety of applications, typically either ran as an automated script or embedded as a plugin in design programs.</p>
+                   <div class="row display-flex">
+                       
+                       <!-- Audio Animation -->
+                       <div class="col-sm-6 col-md-4">
+                           <div class="thumbnail">
+                               <!-- <img src="..." alt="audio"> -->
+                               <div class="caption">
+                                   <h3>Audio Animation
+                                       <span class="badge">Python</span>
+                                       <span class="badge">Cinema 4D</span>
+                                   </h3>
+                                   <p>Python script for Cinema 4D that changes an object's scale based on the BPM of a song.</p>
+                                   <p><a href="https://github.com/YouGotJaked/Audio-Animation" target="_blank" class="btn btn-primary" role="button">Source</a></p>
+                               </div>
+                           </div>
+                       </div>
+                       
+                       <!-- Reddit Keyword Search Bot -->
+                       <div class="col-sm-6 col-md-4">
+                           <div class="thumbnail">
+                               <!-- <img src="..." alt="Reddit"> -->
+                               <div class="caption">
+                                   <h3>Reddit Keyword Search Bot
+                                       <span class="badge">Python</span>
+                                       <span class="badge">Web</span>
+                                   </h3>
+                                   <p>Python script that searches for new posts with a specified keyword and responds to said post with a comment.</p>
+                                   <p><a href="https://github.com/YouGotJaked/Reddit-Keyword-Search-Bot" target="_blank" class="btn btn-primary" role="button">Source</a></p>
+                               </div>
+                           </div>
+                       </div>
+                       
+                       <!-- Codingbat Solutions -->
+                       <div class="col-sm-6 col-md-4">
+                           <div class="thumbnail">
+                               <!-- <img src="..." alt="CodingBat"> -->
+                               <div class="caption">
+                                   <h3>CodingBat Solutions
+                                       <span class="badge">Python</span>
+                                   </h3>
+                                   <p>Solutions for CodingBat Python problems.</p>
+                                   <p><a href="https://github.com/YouGotJaked/CodingBat-Python" target="_blank" class="btn btn-primary" role="button">Source</a></p>
+                               </div>
+                           </div>
+                       </div>
+                       
+                   </div>
+               </div>
+               
+               <div id="scripts" class="tab-pane fade">
+                   <h3>Scripts</h3>
+                   <p>Other scripts designed for testing or automation in order to make my life easier. Windows scripts written using VBScript or as batch commands, and macOS scripts written using AppleScript and the Unix shell. Most web-based scripts are written using JavaScript.</p>
+                   <div class="row display-flex">
+                       
+                       <!-- User Workload -->
+                       <div class="col-sm-6 col-md-4">
+                           <div class="thumbnail">
+                               <!-- <img src="..." alt="UserWorkload"> -->
+                               <div class="caption">
+                                   <h3>User Workload
+                                       <span class="badge">Shell</span>
+                                       <span class="badge">Testing</span>
+                                   </h3>
+                                   <p>This shell script is designed to test the impact of user workload on file system performance.</p>
+                                   <p><a href="https://github.com/YouGotJaked/user-workload" target="_blank" class="btn btn-primary" role="button">Source</a></p>
+                               </div>
+                           </div>
+                       </div>
+                       
+                       <!-- macOS Disk Speed -->
+                       <div class="col-sm-6 col-md-4">
+                           <div class="thumbnail">
+                               <!-- <img src="..." alt="DiskSpeed"> -->
+                               <div class="caption">
+                                   <h3>macOS Disk Speed Testing
+                                       <span class="badge">Shell</span>
+                                       <span class="badge">Testing</span>
+                                   </h3>
+                                   <p>A collection of Bash scripts used for benchmarking disk speeds on macOS.</p>
+                                   <p><a href="https://github.com/YouGotJaked/macOS-Disk-Speed-Testing" target="_blank" class="btn btn-primary" role="button">Source</a></p>
+                               </div>
+                           </div>
+                       </div>
+                       
+                       <!-- Save PDF to PNG -->
+                       <div class="col-sm-6 col-md-4">
+                           <div class="thumbnail">
+                               <!-- <img src="..." alt="PDF-PNG"> -->
+                               <div class="caption">
+                                   <h3>Save PDF as PNG
+                                       <span class="badge">JavaScript</span>
+                                       <span class="badge">Automation</span>
+                                   </h3>
+                                   <p>This script takes a filled out PDF form and automatically saves it as a PNG.</p>
+                                   <p><a href="https://github.com/YouGotJaked/Save-PDF-as-PNG" target="_blank" class="btn btn-primary" role="button">Source</a></p>
+                               </div>
+                           </div>
+                       </div>
+                       
+                   </div>
+               </div>
+               
+               <div id="ios" class="tab-pane fade">
+                   <h3>iOS/Android Apps</h3>
+                   <p>Mobile applications developed in my free time as side projects. iOS apps are written in Swift 4, and Android apps are written in Kotlin/Java.</p>
+                   <div class="row display-flex">
+                       
+                       <!-- Sphere Kotlin Demo -->
+                       <div class="col-sm-6 col-md-4">
+                           <div class="thumbnail">
+                               <!-- <img src="..." alt="UserLoc"> -->
+                               <div class="caption">
+                                   <h3>Get User Location
+                                       <span class="badge">Kotlin</span>
+                                       <span class="badge">Android</span>
+                                   </h3>
+                                   <p>Android application written in Kotlin which displays a user's current location and uses that information to prefill a form with their address. When the form is submitted, the user's name and address is parsed as a JSON object using Gson.</p>
+                                   <p><a href="https://github.com/YouGotJaked/Get-User-Location" class="btn btn-primary" target="_blank" role="button">Source</a></p>
+                               </div>
+                           </div>
+                       </div>
+                       
+                       <!-- Meddie's Mobile Cookbook -->
+                       <div class="col-sm-6 col-md-4">
+                           <div class="thumbnail">
+                               <!-- <img src="..." alt="Meddie"> -->
+                               <div class="caption">
+                                   <h3>Meddie's Mobile Cookbook
+                                       <span class="badge">Swift</span>
+                                       <span class="badge">iOS</span>
+                                   </h3>
+                                   <p>iOS application containing library full of simple recipes that Maddie would enjoy.</p>
+                                   <p><a href="https://github.com/YouGotJaked/Meddie-Mobile-Cookbook" class="btn btn-primary" target="_blank" role="button">Source</a></p>
+                               </div>
+                           </div>
+                       </div>
+                       
+                   </div>
+               </div>
+               
+               <div id="vr" class="tab-pane fade">
+                   <h3>VR/AR</h3>
+                   <p>Variety of projects. Larger projects are developed in Unreal Engine 4 using C++/Blueprint. Smaller projects are written in Lua using the LÖVR framework. Future projects may include ARKit.</p>
+                   
+                   <div class="row display-flex">
+                       
+                       <!-- Within -->
+                       <div class="col-sm-6 col-md-4">
+                           <div class="thumbnail">
+                               <!-- <img src="..." alt="Within"> -->
+                               <div class="caption">
+                                   <h3>Within
+                                       <span class="badge" >C++</span>
+                                       <span class="badge">UE4</span>
+                                   </h3>
+                                   <p>VR experience designed to put users inside the head of Alex, a teen diagnosed with generalized anxiety disorder. Alex is currently in detention, and users must complete a series of puzzles before leaving. Beware for thinking traps. Written using Blueprint/C++ in Unreal Engine 4.</p>
+                                   <p><a href="https://github.com/YouGotJaked/within" class="btn btn-primary" target="_blank" role="button">Source</a></p>
+                               </div>
+                           </div>
+                       </div>
+                       
+                   </div>
+               </div>
+               
+               <div id="other" class="tab-pane fade">
+                   <h3>Other</h3>
+                   <p>Miscellaneous side projects that do not fit the other categories.</p>
+                   
+                   <div class="row display-flex">
+                       
+                       <!-- Sound Reactive LEDs -->
+                       <div class="col-sm-6 col-md-4">
+                           <div class="thumbnail">
+                               <!-- <img src="..." alt="Sound"> -->
+                               <div class="caption">
+                                   <h3>Sound Reactive LEDs
+                                       <span class="badge">Arduino</span>
+                                   </h3>
+                                   <p>Arduino project that changes the colors of an RGB LED strip to the beat of a song using a digital sound sensor.</p>
+                                   <p><a href="https://github.com/YouGotJaked/Sound-Reactive-LEDs" class="btn btn-primary" target="_blank" role="button">Source</a></p>
+                               </div>
+                           </div>
+                       </div>
+                       
+                       <!-- Powerball Simulator -->
+                       <div class="col-sm-6 col-md-4">
+                           <div class="thumbnail">
+                               <!-- <img src="..." alt="Powerball"> -->
+                               <div class="caption">
+                                   <h3>Powerball Simulator 2015
+                                       <span class="badge">Java</span>
+                                       <span class="badge">Lab</span>
+                                   </h3>
+                                   <p>Powerball simulator written in Java for a computer science class project. It takes a user-input ticket and simulates how many weeks and how much money you would have to spend in order to win with that ticket.</p>
+                                   <p><a href="https://github.com/YouGotJaked/Powerball-Simulator-2015" class="btn btn-primary" target="_blank" role="button">Source</a></p>
+                               </div>
+                           </div>
+                       </div>
+                       
+                       <!-- Median -->
+                       <div class="col-sm-6 col-md-4">
+                           <div class="thumbnail">
+                               <!-- <img src="..." alt="Median"> -->
+                               <div class="caption">
+                                   <h3>Median
+                                       <span class="badge">Lua</span>
+                                       <span class="badge">Lab</span>
+                                   </h3>
+                                   <p>Lua program that reads through a text file and searches for any integers, creates an array of said integers, and returns the median of the array.</p>
+                                   <p><a href="https://github.com/YouGotJaked/Median" class="btn btn-primary" target="_blank" role="button">Source</a></p>
+                               </div>
+                           </div>
+                       </div>
+                       
+                       <!-- Maximum -->
+                       <div class="col-sm-6 col-md-4">
+                           <div class="thumbnail">
+                               <!-- <img src="..." alt="Maximum"> -->
+                               <div class="caption">
+                                   <h3>Maximum
+                                       <span class="badge">Lua</span>
+                                       <span class="badge">Lab</span>
+                                   </h3>
+                                   <p>Lua program that reads through a text file and searches for any integers, creates an array of said integers, and returns the maximum of the array.</p>
+                                   <p><a href="https://github.com/YouGotJaked/Maximum" class="btn btn-primary" target="_blank" role="button">Source</a></p>
+                               </div>
+                           </div>
+                       </div>
+                    
+                   </div>
+               </div>
+           </div>
+       </div>
+       
+       <script>
+        // Add active class to the current button (highlight it)
+           var header = document.getElementById("projects");
+           var pills = header.getElementsByClassName("pill");
+           for (var i = 0; i < pills.length; i++) {
+               pills[i].addEventListener("click", function() {
+                    var current = document.getElementsByClassName("active");
+                    current[0].className = current[0].className.replace(" active", "");
+                    this.className += " active";
+            });
+           }
+       </script>
+       
+       <!-- PORTFOLIO -->
+       <div id="portfolio" class="container-fluid">
+           <h1>Portfolio</h1>
+           <ul class="nav nav-pills nav-justified">
+               <li class="active"><a data-toggle="pill" href="#intros">Intros/Animation</a></li>
+               <li><a data-toggle="pill" href="#album">Album Artwork</a></li>
+               <li><a data-toggle="pill" href="#logos">Logos</a></li>
+               <li><a data-toggle="pill" href="#wallpapers">Wallpapers</a></li>
+           </ul>
+           
+           <div class="tab-content">
+               <div id="intros" class="tab-pane fade in active">
+                   <h3>Intros/Animation</h3>
+                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+               </div>
+               <div id="album" class="tab-pane fade">
+                   <h3>Album Artwork</h3>
+                   <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+               </div>
+               <div id="logos" class="tab-pane fade">
+                   <h3>Logos</h3>
+                   <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+               </div>
+               <div id="wallpapers" class="tab-pane fade">
+                   <h3>Wallpapers</h3>
+                   <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+               </div>
+           </div>
+           
+           <script>
+               // Add active class to the current button (highlight it)
+               var header = document.getElementById("portfolio");
+               var pills = header.getElementsByClassName("pill");
+               for (var i = 0; i < pills.length; i++) {
+                   pills[i].addEventListener("click", function() {
+                var current = document.getElementsByClassName("active");
+                                             current[0].className = current[0].className.replace(" active", "");
+                                             this.className += " active";
+                                             });
+               }
+           </script>
+       </div>
+       
+       <!-- WORK EXPERIENCE -->
+       <div id="work" class="container-fluid">
+           <h1>Work Experience</h1>
+           <div id="work" class="media">
+               <!-- Field Support Technician -->
+               <div class="media-left">
+                   <a href="#">
+                       <img class="media-object" src="img/scu.png" alt="scu" height="64" width="64">
+                   </a>
+               </div>
+               <div class="media-body">
+                       <h4 class="media-heading">Field Support Technician - Santa Clara University</h4>
+                       <p>I provide onsite computer assistance for students, faculty, and staff who are unable to have their issue resolved solely with the help of a help desk analyst over the phone. I also assist in the PC Replacement Program by wiping, imaging, asset tagging, and installing new Windows and Mac machines.</p>
+               </div>
+               
+               <!-- Help Desk Analyst -->
+               <div class="media-left">
+                   <a href="#">
+                       <img class="media-object" src="img/scu.png" alt="scu" height="64" width="64">
+                   </a>
+               </div>
+               <div class="media-body">
+                   <h4 class="media-heading">Help Desk Analyst - Santa Clara University</h4>
+                   <p>I provide a centralized point of contact for technical support to the University community in person, over the phone, via online chat, email and voicemail. I am the first line of support for faculty, staff, students and guests in the following areas: PC/Mac Software, PC/Mac Hardware, Wireless or Network issues, Smart Print, eCampus, Telephone Hardware, Voicemail, Google Suite, network and standalone Printers.</p>
+               </div>
+               
+               <!-- Web Design -->
+               <div class="media-left">
+                   <a href="#">
+                       <img class="media-object" src="img/och.png" alt="och" height="64" width="64">
+                   </a>
+               </div>
+               <div class="media-body">
+                   <h4 class="media-heading">Web Design - Oil Can Henry's</h4>
+                   <p>I worked as a contractor, focusing on updating the company portabl website for their HR department. I added custom CSS to improve the user interface as well as implemented a PHP script to track website visitors.</p>
+               </div>
+               
+               <!-- YouGotJaked -->
+               <div class="media-left">
+                   <a href="#">
+                       <img class="media-object" src="img/ygj_circle.png" alt="ygj" height="64" width="64">
+                   </a>
+               </div>
+               <div class="media-body">
+                   <h4 class="media-heading">Graphic Design - YouGotJaked</h4>
+                   <p>This is a self-started graphic design and motion graphics business I have been working on since I was 13. I post online tutorial videos teaching beginner to intermediate design skills in various program such as Adobe Photoshop, After Effects, and Maxon Cinema 4D. I also sell digital prints online, earning over $10,000 in sales since 2014.</p>
+               </div>
+            </div>
+       </div>
+       
+       <!-- CONTACT -->
+       <div id="contact" class="container-fluid">
+           <h1>Contact Me</h1>
+           <div class="row">
+               <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
+                   <ul class="list-grouplist-group-flush">
+                       <li class="list-group-item">
+                           <i class="fas fa-map-marker-alt"></i>
+                           Santa Clara, CA
+                       </li>
+                       <li class="list-group-item">
+                           <i class="fas fa-mobile"></i>
+                           (503) 544-5165
+                       </li>
+                       <li class="list-group-item">
+                           <i class="fas fa-envelope"></i>
+                           jday@scu.edu
+                       </li>
+                       <li class="list-group-item">
+                           <i class="fab fa-github"></i>
+                           <a href="https://github.com/YouGotJaked">https://github.com/YouGotJaked</a>
+                       </li>
+                       <li class="list-group-item">
+                           <i class="fab fa-linkedin-in"></i>
+                           <a href="https://www.linkedin.com/in/jaked97/">https://www.linkedin.com/in/jaked97/</a>
+                       </li>
+                       
+                   </ul>
+               </div>
+               <!-- FIX RIGHT PADDING -->
+               <div class="container-fluid">
+                   <div id="map" style="width:450;height:450px"></div>
+                   
+                   <script>
+                       function myMap() {
+                           // SCU LatLng = 37.3474276,-121.9386101
+                           var myCenter = new google.maps.LatLng(37.3474276,-121.9386101);
+                           var mapCanvas = document.getElementById("map");
+                           var mapOptions = {center: myCenter, zoom: 9};
+                           var map = new google.maps.Map(mapCanvas, mapOptions);
+                           var marker = new google.maps.Marker({position:myCenter});
+                           marker.setMap(map);
+                       }
+                   </script>
+                   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrgHZzflA6n_nIvrIX6er2A51bd7WSmbo&callback=myMap"></script>
+               </div>
+           </div>
+       </div>
+       
+       <!-- FOOTER -->
        <footer class="container-fluid text-center">
             <!-- DO NOT DELETE MANDATORY SCU DISCLAIMER -->
             <p>The content of these web pages is not generated by and does not represent the views of Santa Clara University or any of its departments or organizations.</p>
