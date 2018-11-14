@@ -47,6 +47,21 @@ html, body {
     padding-right: 51px;
 }
 
+.row.display-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.media {
+    padding-top: 25px;
+    padding-left: 51px;
+    padding-right: 51px;
+}
+
+.thumbnail {
+    height: 100%;
+}
+
 #main {
     overflow:auto;
     padding-bottom:150px; /* this needs to be bigger than footer height*/
