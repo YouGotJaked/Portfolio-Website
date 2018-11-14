@@ -1,6 +1,7 @@
 html, body {
 	height: 100%;
     padding-top: 20px;
+    position: relative;
 }
 
 /* Remove navbar defaults */
@@ -9,13 +10,18 @@ html, body {
     border-radius: 0;
 }
 
+.navbar-nav > li{
+    margin-left:10px;
+    margin-right:10px;
+}
+
 .navbar-brand {
     width: 51px;
 }
 
-.navbar-brand>img {
+.navbar-brand > img {
     position: relative;
-    margin-top: -15px;
+    /* margin-top: -15px; */
     right: 15px;
 }
 
@@ -60,6 +66,13 @@ html, body {
 
 .thumbnail {
     height: 100%;
+}
+
+.section {
+    position: relative;
+}
+.section:target {
+    padding-top: 10%;
 }
 
 .slideanim {

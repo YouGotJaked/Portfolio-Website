@@ -11,7 +11,7 @@
         <link rel="stylesheet" href="https://cdnjs.buttflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
             
         <!-- Bootstrap CSS -->
-        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
             
         <!-- Custom CSS -->
         <link rel="stylesheet" href="css/style.css">
@@ -20,25 +20,22 @@
         <!-- JavaScript -->
         <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.buttflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     </head>
     
     <!-- Scrollable area -->
     <body data-spy="scroll" data-target=".navbar" data-offset="50">
         <!-- Top navigation bar -->
-        <nav class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="index.html">
-                        <img src="img/ygj.gif" alt="Brand Icon" width="51" height="51">
+        <nav class="navbar fixed-top navbar-expand-sm navbar-light bg-light">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/ygj.gif" alt="Brand Icon" width="64" height="64">
                     </a>
-                </div>
-                <div class="collapse navbar-collapse" id="myNavbar">
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#myNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="#home">
                             <i class="fas fa-home"></i>
@@ -65,12 +62,11 @@
                             Contact</a>
                         </li>
                     </ul>
-                </div>
             </div>
         </nav>
         
         <!-- HOME -->
-        <div id="home" class="jumbotron">
+        <div id="home" class="jumbotron section" style="height:100vh">
             <div class="container text-center">
                 <p> Hi, my name is</p>
                 <p style="font-size:600%;"><strong>Jake Day</strong></p>
@@ -78,20 +74,21 @@
                 <button type="button" onclick="window.open('msc/resume.pdf')" class="btn btn-default btn-lg">
                     <i class="fas fa-cloud-download-alt"></i> Resume
                 </button>
+                <p style="font-size:200%;"><strong>Test #<script>document.write(Math.ceil(Math.random() * 2018))</script></strong><p>
             </div>
         </div>
         
         <!-- ABOUT ME -->
-        <div id="about" class="container-fluid">
+        <div id="about" class="container-fluid" style="height:100vh">
             <h1>About Me</h1>
             <div class="contact-photo">
-                <img src="img/contact.png" class="img-responsive" width="756" height="555">
+                <img src="img/contact.png" class="img-fluid" width="756" height="555">
             </div>
             <p>Hi, my name is Jake. I am a senior Computer Science and Engineering major at Santa Clara University.</p>
         </div>
        
        <!-- PROJECTS -->
-       <div id="projects" class="container-fluid">
+       <div id="projects" class="container-fluid" style="height:100vh">
            <h1>Projects</h1>
            <ul class="nav nav-pills nav-justified">
                <li class="active"><a data-toggle="pill" href="#oop">C/C++/Java</a></li>
@@ -426,7 +423,7 @@
        </script>
        
        <!-- PORTFOLIO -->
-       <div id="portfolio" class="container-fluid">
+       <div id="portfolio" class="container-fluid" style="height:100vh">
            <h1>Portfolio</h1>
            <ul class="nav nav-pills nav-justified">
                <li class="active"><a data-toggle="pill" href="#intros">Intros/Animation</a></li>
@@ -469,14 +466,12 @@
        </div>
        
        <!-- WORK EXPERIENCE -->
-       <div id="work" class="container-fluid">
+       <div id="work" class="container-fluid" style="height:100vh">
            <h1>Work Experience</h1>
-           <div id="work" class="media">
+           <div id="work_experience" class="media">
                <!-- Field Support Technician -->
                <div class="media-left">
-                   <a href="#">
-                       <img class="media-object" src="img/scu.png" alt="scu" height="64" width="64">
-                   </a>
+                   <img class="media-object" src="img/scu.png" alt="scu" height="64" width="64">
                </div>
                <div class="media-body">
                        <h4 class="media-heading">Field Support Technician - Santa Clara University</h4>
@@ -485,9 +480,7 @@
                
                <!-- Help Desk Analyst -->
                <div class="media-left">
-                   <a href="#">
-                       <img class="media-object" src="img/scu.png" alt="scu" height="64" width="64">
-                   </a>
+                   <img class="media-object" src="img/scu.png" alt="scu" height="64" width="64">
                </div>
                <div class="media-body">
                    <h4 class="media-heading">Help Desk Analyst - Santa Clara University</h4>
@@ -496,9 +489,7 @@
                
                <!-- Web Design -->
                <div class="media-left">
-                   <a href="#">
-                       <img class="media-object" src="img/och.png" alt="och" height="64" width="64">
-                   </a>
+                   <img class="media-object" src="img/och.png" alt="och" height="64" width="64">
                </div>
                <div class="media-body">
                    <h4 class="media-heading">Web Design - Oil Can Henry's</h4>
@@ -507,9 +498,7 @@
                
                <!-- YouGotJaked -->
                <div class="media-left">
-                   <a href="#">
-                       <img class="media-object" src="img/ygj_circle.png" alt="ygj" height="64" width="64">
-                   </a>
+                   <img class="media-object" src="img/ygj_circle.png" alt="ygj" height="64" width="64">
                </div>
                <div class="media-body">
                    <h4 class="media-heading">Graphic Design - YouGotJaked</h4>
@@ -534,7 +523,7 @@
                        </li>
                        <li class="list-group-item">
                            <i class="fas fa-envelope"></i>
-                           jday@scu.edu
+                           <a href="mailto:jday@scu.edu">jday@scu.edu</a>
                        </li>
                        <li class="list-group-item">
                            <i class="fab fa-github"></i>
