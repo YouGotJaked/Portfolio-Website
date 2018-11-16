@@ -15,7 +15,11 @@
             
         <!-- Custom CSS -->
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/animate.css">
         <link rel="shortcut icon" href="img/ygj.ico">
+            
+        <!-- AOS CSS -->
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
         
         <!-- JavaScript -->
         <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
@@ -28,14 +32,15 @@
     <!-- Scrollable area -->
     <body data-spy="scroll" data-target=".navbar" data-offset="50">
         <!-- Top navigation bar -->
-        <nav class="navbar fixed-top navbar-expand-sm navbar-light bg-light">
+        <nav class="navbar navbar-light fixed-top navbar-expand-md">
             <a class="navbar-brand" href="index.html">
                 <img src="img/ygj.gif" alt="Brand Icon" width="64" height="64">
-                    </a>
-            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#myNavbar" aria-expanded="false" aria-label="Toggle navigation">
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="myNavbar">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="px-2">
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="#home">
                             <i class="fas fa-home"></i>
@@ -62,8 +67,16 @@
                             Contact</a>
                         </li>
                     </ul>
+                </div>
             </div>
         </nav>
+        <!-- Change active navbar tab -->
+        <script>
+        $(".nav a").on("click", function(){
+            $(".nav").find(".active").removeClass("active");
+            $(this).parent().addClass("active");
+        });
+        </script>
         
         <!-- HOME -->
         <div id="home" class="jumbotron section" style="height:100vh">
@@ -74,13 +87,12 @@
                 <button type="button" onclick="window.open('msc/resume.pdf')" class="btn btn-default btn-lg">
                     <i class="fas fa-cloud-download-alt"></i> Resume
                 </button>
-                <p style="font-size:200%;"><strong>Test #<script>document.write(Math.ceil(Math.random() * 2018))</script></strong><p>
             </div>
         </div>
         
         <!-- ABOUT ME -->
-        <div id="about" class="container-fluid" style="height:100vh">
-            <h1>About Me</h1>
+        <div id="about" class="container-fluid section" style="height:100vh">
+            <h1 data-aos="fade-right" data-aos-anchor="#about">About Me</h1>
             <div class="contact-photo">
                 <img src="img/contact.png" class="img-fluid" width="756" height="555">
             </div>
@@ -88,8 +100,8 @@
         </div>
        
        <!-- PROJECTS -->
-       <div id="projects" class="container-fluid" style="height:100vh">
-           <h1>Projects</h1>
+       <div id="projects" class="container-fluid section" style="height:100vh">
+           <h1 data-aos="fade-right" data-aos-anchor="#projects">Projects</h1>
            <ul class="nav nav-pills nav-justified">
                <li class="active"><a data-toggle="pill" href="#oop">C/C++/Java</a></li>
                <li><a data-toggle="pill" href="#python">Python</a></li>
@@ -423,8 +435,8 @@
        </script>
        
        <!-- PORTFOLIO -->
-       <div id="portfolio" class="container-fluid" style="height:100vh">
-           <h1>Portfolio</h1>
+       <div id="portfolio" class="container-fluid section" style="height:100vh">
+           <h1 data-aos="fade-right" data-aos-anchor="#portfolio">Portfolio</h1>
            <ul class="nav nav-pills nav-justified">
                <li class="active"><a data-toggle="pill" href="#intros">Intros/Animation</a></li>
                <li><a data-toggle="pill" href="#album">Album Artwork</a></li>
@@ -466,8 +478,8 @@
        </div>
        
        <!-- WORK EXPERIENCE -->
-       <div id="work" class="container-fluid" style="height:100vh">
-           <h1>Work Experience</h1>
+       <div id="work" class="container-fluid section" style="height:100vh">
+           <h1 data-aos="fade-right" data-aos-anchor="#work">Work Experience</h1>
            <div id="work_experience" class="media">
                <!-- Field Support Technician -->
                <div class="media-left">
@@ -508,8 +520,8 @@
        </div>
        
        <!-- CONTACT -->
-       <div id="contact" class="container-fluid">
-           <h1>Contact Me</h1>
+       <div id="contact" class="container-fluid section">
+           <h1 data-aos="fade-right" data-aos-anchor="#contact">Contact Me</h1>
            <div class="row">
                <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
                    <ul class="list-grouplist-group-flush">
@@ -561,5 +573,8 @@
             <!-- DO NOT DELETE MANDATORY SCU DISCLAIMER -->
             <p>The content of these web pages is not generated by and does not represent the views of Santa Clara University or any of its departments or organizations.</p>
        </footer>
+       
+       <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+       <script>AOS.init();</script>
     </body>
 </html>

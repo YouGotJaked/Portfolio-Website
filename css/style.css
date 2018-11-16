@@ -4,10 +4,35 @@ html, body {
     position: relative;
 }
 
-/* Remove navbar defaults */
-.navbar {
-    margin-bottom: 0;
-    border-radius: 0;
+/* COLOR SCHEME
+ light gray: #DCDCDC
+ dark gray: #2D2D2D
+ greenish gray: #6B7E77
+ light green: #43932C
+ dark green: #237510
+ */
+
+.navbar-light {
+    background-color: #DCDCDC;
+}
+
+.navbar-light .navbar-nav > li > a {
+    color: #2D2D2D;
+}
+.navbar-light .navbar-nav > li > a:hover,
+.navbar-light .navbar-nav > li > a:focus {
+    color: #6B7E77;
+}
+.navbar-light .navbar-nav > .active > a,
+.navbar-light .navbar-nav > .active > a:hover,
+.navbar-light .navbar-nav > .active > a:focus {
+    color: #43932C;
+}
+.navbar-light .navbar-nav > .open > a,
+.navbar-light .navbar-nav > .open > a:hover,
+.navbar-light .navbar-nav > .open > a:focus {
+    color: #438730;
+    background-color: #D5D5D5;
 }
 
 .navbar-nav > li{
@@ -21,7 +46,6 @@ html, body {
 
 .navbar-brand > img {
     position: relative;
-    /* margin-top: -15px; */
     right: 15px;
 }
 
@@ -71,33 +95,9 @@ html, body {
 .section {
     position: relative;
 }
-.section:target {
-    padding-top: 10%;
-}
 
-.slideanim {
-    visibility:hidden;
-    visibility:visible\9;/*For old IE browsers IE6-8 */
-}
-.slideanim.slide {
-    visibility: visible;
-    animation: slide 1s;
-}
-.slideanim::after {
-    /* useful when its child elements are float:left; */
-    content: "";
-    display: table;
-    clear: both;
-}
-@keyframes slide {
-    0% {
-        opacity: 0;
-        transform: translateY(50%);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.section:target {
+    padding-top: 7%;
 }
 
 #main {
