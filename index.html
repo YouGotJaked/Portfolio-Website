@@ -15,7 +15,6 @@
             
         <!-- Custom CSS -->
         <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/animate.css">
         <link rel="shortcut icon" href="img/ygj.ico">
             
         <!-- AOS CSS -->
@@ -29,10 +28,9 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     </head>
     
-    <!-- Scrollable area -->
-    <body data-spy="scroll" data-target=".navbar" data-offset="50">
+    <body>
         <!-- Top navigation bar -->
-        <nav class="navbar navbar-light fixed-top navbar-expand-md">
+        <nav class="navbar navbar-light fixed-top navbar-expand-md" id="myNavbar">
             <a class="navbar-brand" href="index.html">
                 <img src="img/ygj.gif" alt="Brand Icon" width="64" height="64">
             </a>
@@ -70,6 +68,7 @@
                 </div>
             </div>
         </nav>
+        
         <!-- Change active navbar tab -->
         <script>
         $(".nav a").on("click", function(){
@@ -78,6 +77,8 @@
         });
         </script>
         
+        <!-- Scrollable area -->
+        <!-- <div data-spy="scroll" data-target="#myNavbar" data-offset="0"> -->
         <!-- HOME -->
         <div id="home" class="jumbotron section" style="height:100vh">
             <div class="container text-center">
@@ -437,27 +438,35 @@
        <!-- PORTFOLIO -->
        <div id="portfolio" class="container-fluid section" style="height:100vh">
            <h1 data-aos="fade-right" data-aos-anchor="#portfolio">Portfolio</h1>
-           <ul class="nav nav-pills nav-justified">
-               <li class="active"><a data-toggle="pill" href="#intros">Intros/Animation</a></li>
-               <li><a data-toggle="pill" href="#album">Album Artwork</a></li>
-               <li><a data-toggle="pill" href="#logos">Logos</a></li>
-               <li><a data-toggle="pill" href="#wallpapers">Wallpapers</a></li>
+           <ul class="nav nav-pills" role="tablist" aria-orientation="horizontal">
+               <li class="nav-item pill-1">
+                   <a class="nav-link active" id="intros-tab" data-toggle="tab" href="#intros">Intros/Animation</a>
+               </li>
+               <li class="nav-item pill-2">
+                   <a class="nav-link" id="album-tab" data-toggle="tab" href="#album">Album Artwork</a>
+               </li>
+               <li class="nav-item pill-3">
+                   <a class="nav-link" id="logos-tab" data-toggle="tab" href="#logos">Logos</a>
+                </li>
+               <li class="nav-item pill-4">
+                   <a class="nav-link" id="wallpaper-tab" data-toggle="tab" href="#wallpapers">Wallpapers</a>
+                </li>
            </ul>
            
-           <div class="tab-content">
-               <div id="intros" class="tab-pane fade in active">
+           <div class="tab-content" id="pills-tabContent">
+               <div id="intros" class="tab-pane fade show active" role="tabpanel" aria-labelledby="intros-tab">
                    <h3>Intros/Animation</h3>
                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                </div>
-               <div id="album" class="tab-pane fade">
+               <div id="album" class="tab-pane fade" role="tabpanel" aria-labelledby="album-tab">
                    <h3>Album Artwork</h3>
                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                </div>
-               <div id="logos" class="tab-pane fade">
+               <div id="logos" class="tab-pane fade" role="tabpanel" aria-labelledby="logos-tab">
                    <h3>Logos</h3>
                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
                </div>
-               <div id="wallpapers" class="tab-pane fade">
+               <div id="wallpapers" class="tab-pane fade" role="tabpanel" aria-labelledby="wallpaper-tab">
                    <h3>Wallpapers</h3>
                    <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
                </div>
@@ -466,13 +475,13 @@
            <script>
                // Add active class to the current button (highlight it)
                var header = document.getElementById("portfolio");
-               var pills = header.getElementsByClassName("pill");
+               var pills = header.getElementsByClassName("pills");
                for (var i = 0; i < pills.length; i++) {
                    pills[i].addEventListener("click", function() {
-                var current = document.getElementsByClassName("active");
-                                             current[0].className = current[0].className.replace(" active", "");
-                                             this.className += " active";
-                                             });
+                        var current = document.getElementsByClassName("active");
+                        current[0].className = current[0].className.replace(" active", "");
+                        this.className += " active";
+                   });
                }
            </script>
        </div>
@@ -480,7 +489,7 @@
        <!-- WORK EXPERIENCE -->
        <div id="work" class="container-fluid section" style="height:100vh">
            <h1 data-aos="fade-right" data-aos-anchor="#work">Work Experience</h1>
-           <div id="work_experience" class="media">
+           <div id="work-experience" class="col-sm-8">
                <!-- Field Support Technician -->
                <div class="media-left">
                    <img class="media-object" src="img/scu.png" alt="scu" height="64" width="64">
@@ -505,7 +514,7 @@
                </div>
                <div class="media-body">
                    <h4 class="media-heading">Web Design - Oil Can Henry's</h4>
-                   <p>I worked as a contractor, focusing on updating the company portabl website for their HR department. I added custom CSS to improve the user interface as well as implemented a PHP script to track website visitors.</p>
+                   <p>I worked as a contractor, focusing on updating the company portal website for their HR department. I added custom CSS to improve the user interface as well as implemented a PHP script to track website visitors.</p>
                </div>
                
                <!-- YouGotJaked -->
@@ -567,7 +576,7 @@
                </div>
            </div>
        </div>
-       
+       <!-- </div> -->
        <!-- FOOTER -->
        <footer class="container-fluid text-center">
             <!-- DO NOT DELETE MANDATORY SCU DISCLAIMER -->

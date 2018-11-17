@@ -4,6 +4,11 @@ html, body {
     position: relative;
 }
 
+#main {
+    overflow:auto;
+    padding-bottom:150px; /* this needs to be bigger than footer height*/
+}
+
 /* COLOR SCHEME
  light gray: #DCDCDC
  dark gray: #2D2D2D
@@ -14,6 +19,7 @@ html, body {
 
 .navbar-light {
     background-color: #DCDCDC;
+    max-height:64px !important;
 }
 
 .navbar-light .navbar-nav > li > a {
@@ -51,25 +57,49 @@ html, body {
 
 .nav-pills {
     padding-top: 25px;
-    padding-left: 51px;
-    padding-right: 51px;
+    padding-bottom: 25px;
 }
 
-.nav-pills>li.active>a:active
-.nav-pills>li.active>a:hover,
-.nav-pills>li.active>a:focus {
-    background-color: #339933;
+/* not active pills */
+.nav-pills .pill-1 .nav-link:not(.active) {
+    background-color:  white;
+    color: black;
+}
+
+.nav-pills .pill-2 .nav-link:not(.active) {
+    background-color:  white;
+    color: black;
+}
+
+.nav-pills .pill-3 .nav-link:not(.active) {
+    background-color:  white;
+    color: black;
+}
+
+.nav-pills .pill-4 .nav-link:not(.active) {
+    background-color:  white;
+    color: black;
+}
+
+
+/* active pills */
+.nav-pills .pill-1 .nav-link {
+    background-color: #43932C;
     color: white;
 }
 
-.nav-pills .open>a,
-.nav-pills .open>a:active,
-.nav-pills .open>a:focus {
-    background-color: #339933;
+.nav-pills .pill-2 .nav-link {
+    background-color: #43932C;
 }
 
-.nav-pills>li>a {
-    color: #339933;
+.nav-pills .pill-3 .nav-link {
+    background-color: #43932C;
+    color: white;
+}
+
+.nav-pills .pill-4 .nav-link {
+    background-color: #43932C;
+    color: white;
 }
 
 .tab-content {
@@ -82,10 +112,8 @@ html, body {
     flex-wrap: wrap;
 }
 
-.media {
-    padding-top: 25px;
-    padding-left: 51px;
-    padding-right: 51px;
+.work-experience {
+    .padding-bottom: 30px;
 }
 
 .thumbnail {
@@ -100,10 +128,14 @@ html, body {
     padding-top: 7%;
 }
 
-#main {
-    overflow:auto;
-    padding-bottom:150px; /* this needs to be bigger than footer height*/
+.work {
+    padding-bottom: 100px;
 }
+
+.work-experience {
+    padding-bottom: 100px;
+}
+
 
 .footer {
     position: relative;
